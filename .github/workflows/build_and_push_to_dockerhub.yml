@@ -28,9 +28,13 @@ jobs:
 
       - name: Verify JAR exists
         run: |
+          echo ------------
           pwd
+          echo ------------       
           ls -la
+          echo ------------        
           ls -la build/libs/
+          echo ------------          
           test -f build/libs/TestWebProject.jar
 
       - name: Login to Docker Hub
