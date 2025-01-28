@@ -1,13 +1,15 @@
 package ru.isg.testwebproject.controller;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 public class HelloController {
 
     @GetMapping("/hello")
-    public String hello() {
-        return "Hello User!";
+    public String hello(Model model) {
+        model.addAttribute("userName", "IVAN");
+        return "hello";
     }
 }
